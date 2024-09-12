@@ -69,8 +69,8 @@ export function ProjectDetail() {
             (       
                 <ProjectDetailCard
                     title="Travel/Tour Arrangement App"
-                    sub="Focussed on LandingPage with Contact and UserRatingForm CRUD Operation and Responsiveness"
-                    url="https://weddingwise-em-frontend.netlify.app/"
+                    sub="Focussed on LandingPage with Register,Login, Contact and UserRatingForm CRUD Operation and Responsiveness"
+                    url="https://tripworld.netlify.app/"
                     implementlist={
                             <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                                 <li>MongoDB</li>
@@ -85,8 +85,10 @@ export function ProjectDetail() {
                     <li><span className="font-semibold">Admin Login - </span>Website Handler,</li>
                     <li><span className="font-semibold">Users Login - </span>Who search for to go for a Trip
                         <ul className="list-disc list-inside">
-                            <li>New User Signup & Existing User Login</li>
-                            <li>List of Tour Packages</li>
+                            <li>New User Register with Activation from Mail & Existing User Login</li>
+                            <li>Forgot Password Functionality</li>
+                            <li>Contact Form</li>
+                            <li>User Rating Form - Mobile App Model</li>
                         </ul>
                     </li>
                 </>
@@ -98,8 +100,8 @@ export function ProjectDetail() {
             (       
                 <ProjectDetailCard
                     title="Portfolio-Avinash Arularasu"
-                    sub="Focussed on the Contents and ThemeSetting "
-                    url="https://weddingwise-em-frontend.netlify.app/"
+                    sub="Focussed on the Contents of Myself and ThemeSetting and Responsive and Interactive design"
+                    url="https://avinasharularasu.netlify.app/"
                     implementlist={
                             <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                                 <li>MongoDB</li>
@@ -122,7 +124,7 @@ export function ProjectDetail() {
                 <ProjectDetailCard
                     title="Movie Browser"
                     sub="Search Functionality and Movie Details Page"
-                    url="https://weddingwise-em-frontend.netlify.app/"
+                    url="https://moviesglobal.netlify.app/"
                     implementlist={
                             <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                                 {/* <li>MongoDB</li>
@@ -134,15 +136,7 @@ export function ProjectDetail() {
                 }
             >
                 <>
-                    <div className="font-semibold text-rose-800">Coming Soon</div>
-                    <li><span className="font-semibold text-rose-800">Admin Login - </span>Website Handler</li>
-                    <li><span className="font-semibold text-rose-800">Users Login - </span>Who has Permission to Edit the details, only after signup
-                        <ul className="list-disc list-inside text-rose-800">
-                            <li>New User Signup & Existing User Login</li>
-                            <li>List of Tour Packages</li>
-                            {/* <li>Add to Favourites/Shortlist which they like</li>
-                            <li>Remove from Favourites</li> */}
-                        </ul>
+                    <li><span className="font-semibold text-rose-800">Basic very simple Login page</span>
                     </li>
                 </>
             </ProjectDetailCard>
