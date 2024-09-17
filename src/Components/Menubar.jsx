@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { UseAppContext } from "../Context/AppContext";
 import imgProfilePhoto from "../assets/img/welcome/Avinash-ProfilePhoto.jpg";
 
