@@ -31,7 +31,7 @@ export function ProjectDetail() {
             (
                 <ProjectDetailCard
                     title="Event Management"
-                    sub="Focussed on Wedding Related Event Management Concept - Complex CRUD Operations - Admin, VendorWise, UserWise Login and Access only their details based on Authenticaion and Authorization"
+                    sub="Focussed on Wedding Related Event Management Concept - Complex CRUD Operations and Navigation - Logical Calculations(AmountRegarding) -  Admin, VendorWise, UserWise Login process and Data Management using Authenticaion and Authorization"
                     url="https://weddingwise-em-frontend.netlify.app/"
                     implementlist={
                             <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
@@ -44,21 +44,203 @@ export function ProjectDetail() {
                     }
                 >
                     <>
-                            <li><span className="font-semibold">Admin Login - </span>Website Handler,</li>
-                            <li><span className="font-semibold">Users Login - </span>Who search for event organisers to plan their events,
-                                <ul className="list-disc list-inside">
-                                    <li>New User Signup & Existing User Login Authentication and Authorization Process(token generation), Password Hash</li>
-                                    <li>Search from list of vendors</li>
-                                    <li>Add to Favourites/Shortlist vendors who they like</li>
-                                    <li>Remove from Favourites</li>
+                    <li>
+                        <span className="font-semibold text-blue-400">Authentication Layers Applied</span>
+                        
+                        <ul className="list-disc list-inside">
+                            <table className="table-auto border-collapse border border-slate-400">
+                                <thead>
+                                    <tr>
+                                        <th className="p-2 border border-slate-400 text-center text-slate-500">Login</th>
+                                        <th className="p-2 border border-slate-400 text-center text-slate-500">Email</th>
+                                        <th className="p-2 border border-slate-400 text-center text-slate-500">Password</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th className="p-2 border border-slate-400 text-slate-400">Admin</th>
+                                        <td className="p-2 border border-slate-400">admin@gmail.com</td>
+                                        <td className="p-2 border border-slate-400">admin@123</td>
+                                    </tr>
+                                    <tr>
+                                        <th className="p-2 border border-slate-400 text-slate-400">User</th>
+                                        <td className="p-2 border border-slate-400">user@gmail.com</td>
+                                        <td className="p-2 border border-slate-400">user@123</td>
+                                    </tr>
+                                    <tr>
+                                        <th className="p-2 border border-slate-400 text-slate-400">Vendor</th>
+                                        <td className="p-2 border border-slate-400">vendor1@gmail.com</td>
+                                        <td className="p-2 border border-slate-400">vendor@123</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </li>
+                    <br />
+                    <li>
+                        <span className="font-semibold text-blue-400">Admin WorkAround</span>
+                        <ul className="list-disc list-inside">
+                            <li>
+                                <span className="font-semibold">User Menu - </span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>Login Using admin Credentials.</li>
                                 </ul>
                             </li>
-                            <li><span className="font-semibold">Vendors/EventOrganizers Login - </span>Who Arrange Events or part of event like Photographers, Decorators, Travels, Food, etc...
-                                <ul className="list-disc list-inside">
-                                    <li>New Vendor Register Their Business & Existing Vendor Login</li>
-                                    <li>Input details like their location, business nature, budget wise details, previous executions,..</li>
+                            <li>
+                                <span className="font-semibold">Admin Menu - </span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>Event Category    Like Wedding, Reception, PreWedding, etc..</li>
+                                    <li>Event Services    Photography, Catering, Travel, OverallEventManageLtds, etc...</li>
+                                </ul>                                
+                            </li>
+                        </ul>
+                    </li>
+                    <br />
+                    <li>
+                        <span className="font-semibold text-blue-400">Vendor WorkAround (To Update Their Basic Package details)</span>
+                        <ul className="list-disc list-inside">
+                            <li>
+                                <span className="font-semibold">Vendors-BusinessSignup Menu</span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>Signup Using New Credentials.</li>
+                                    <li>Login using already Signedup credentials.</li>
                                 </ul>
                             </li>
+                            <li>
+                                <span className="font-semibold">Vendor Menu</span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>
+                                        <span className="font-semibold">View Main Package DetailsVendor Menu</span>
+                                        <ul className="list-disc list-inside pl-4">
+                                            <li>Vendor Shall Add 1 Main/Base PackageDetails to display in users vendor dashboard.</li>
+                                            <li>Edit any no of times.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold">View Payment Terms</span>
+                                        <ul className="list-disc list-inside pl-4">
+                                            <li>Vendor Shall Add 1 Payment Terms to show users.</li>
+                                            <li>Edit any no of times..</li>
+                                        </ul>
+                                    </li>
+                                </ul>                                
+                            </li>
+                        </ul>
+                    </li>
+                    <br />
+                    <li>
+                        <span className="font-semibold text-blue-400">User WorkAround (To Plan their events)</span>
+                        <ul className="list-disc list-inside">
+                            <li>
+                                <span className="font-semibold">User Menu</span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>Signup Using New Credentials.</li>
+                                    <li>Login using already Signedup credentials.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span className="font-semibold">VendorSearch</span>
+                                <ul className="list-disc list-inside pl-4">
+                                    <li>
+                                        <span className="font-semibold">Displays Vendor Basic Detail Cards</span>
+                                        <ul className="list-disc list-inside pl-4">
+                                            <li>Click View Detail to show Detailed View of the Vendor services.</li>
+                                            <li>Use "Add to Favourites" and "Remove from Favourites".</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul className="list-disc list-inside">
+                                    <li>
+                                        <span className="font-semibold">Plan-Register-Pay</span>
+                                        <ul className="list-disc list-inside pl-4">
+                                            <li>
+                                                <span className="font-semibold">My Favourite Vendors </span>
+                                                <ul className="list-disc list-inside pl-4">
+                                                    <li>Displays Vendor Cards Which added to your Favourites.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span className="font-semibold">Event Plan Main Details  </span>
+                                                <ul className="list-disc list-inside pl-4">
+                                                    <li>Form To Input Main Event Plan Details.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span className="font-semibold">Dashbord - Event Plan </span>
+                                                <ul className="list-disc list-inside pl-4">
+                                                    <li>Displays Main Events Only.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span className="font-semibold">Dashboard - Event Plan Detailed View</span>
+                                                <ul className="list-disc list-inside pl-4">
+                                                    <li>Detailed View of the Event.</li>
+                                                    <li>Edit - Edit to edit the Main plandetails.</li>
+                                                    <li>Del  - Delete is Disabled When Vendor is Planned.</li>
+                                                    <li>
+                                                        <span className="font-semibold">PlanVendor</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>
+                                                                Plan different Vendors for the event services like Photography, Catering, Travelarrangements, Hall,..
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">PlanEventPreference</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>
+                                                                User Preference Description input for the event regarding.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">User Preference cards View</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>
+                                                                Shall Edit and Delete.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">Planned Vendor Details Cards ViewDashboard - Event Plan Detailed View</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>Edit  Disabled when Registered Checked.</li>
+                                                            <li>Del   Disabled when Registered Checked.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">RaisePayment - Event Payment</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>Enabled When Registered.</li>
+                                                            <li>Payment Made details input.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">ViewPayments</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>Enabled When Registered.</li>
+                                                            <li>Dashboard Cards View for the payments made for that particular vendor.</li>
+                                                            <li>Edit  Payments made shall be edited.</li>
+                                                            <li>Del   Payments made shall be deleted.</li>
+                                                        
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span className="font-semibold">Event Summary View</span>
+                                                        <ul className="list-disc list-inside pl-4">
+                                                            <li>Planned Basis.</li>
+                                                            <li>Confirmed/Registerd Basis.</li>                                        
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>                                
+                            </li>
+                        </ul>
+                    </li>
                     </>
                 </ProjectDetailCard>
             ):("")
@@ -114,7 +296,9 @@ export function ProjectDetail() {
                 }
             >
                 <>
-                    <li><span className="font-semibold">Contact Detail Submit - </span>Message Stored and Sent to the me in mail</li>
+                <li><span className="font-semibold">Theme Color - </span>Used Custome Theme and DarkMode Switch</li>
+                <li><span className="font-semibold">Project Detail Page </span> Static Contents used Tables, Lists, Paragraph, span</li>
+                <li><span className="font-semibold">Contact Detail Submit - </span>Message Stored and Sent to the me in mail</li>
                 </>
             </ProjectDetailCard>
             ):("")
@@ -124,7 +308,7 @@ export function ProjectDetail() {
             (       
                 <ProjectDetailCard
                     title="Movie Browser"
-                    sub="Focussed on Search Functionality for Movies Search and Movie Details Page and Basic Login and Logout Navigation"
+                    sub="Implemented Search Functionality for Movies Search and Movie Full Details Page and Basic Login and Logout Navigation"
                     url="https://moviesglobal.netlify.app/"
                     implementlist={
                             <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">

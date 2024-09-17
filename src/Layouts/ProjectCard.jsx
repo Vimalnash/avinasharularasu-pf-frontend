@@ -14,7 +14,7 @@ export function ProjectCard(props) {
                 <img className="shadow-[inset_0px_0px_5px_5px_rgb(0,0,0)]" src={props.projImg} alt="ProjectImage" />
             </div>
             <div className={`${theme=="dark" ? "bg-gray-800":"bg-gray-200"} h-full rounded-b-xl flex flex-col justify-between gap-4 p-5 `}>
-                <p className="text-md h-16">{props.projShortDesc}</p>
+                <p className="text-md h-32">{props.projShortDesc}</p>
                 <div className="flex flex-row justify-center">
                     <button 
                         className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300"

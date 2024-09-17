@@ -1,7 +1,7 @@
 // Project Detail Card Layout Component
 export function ProjectDetailCard(props) {
     return (
-        <div className="min-h-screen flex flex-col gap-5 px-5 md:px-32">
+        <div className=" flex flex-col gap-5 mt-12 mb-12 px-5 md:px-32">
             {/* <h2 className="text-2xl shadow p-2 text-center bg-opacity-75 page-header font-semibold uppercase underline"> */}
             <h2  className="text-2xl text-center font-semibold uppercase underline">
                 <a 
@@ -43,10 +43,4 @@ export function ProjectDetailCard(props) {
             </div>
         </div>
     )
-}
-
-export function LoginOperationDetails({children}) {
-    return (
-        {children}
-    )
-}
+};

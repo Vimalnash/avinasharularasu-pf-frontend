@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 // Create Context
 const AppCtx = createContext(null)
@@ -6,10 +6,11 @@ const AppCtx = createContext(null)
 // Assigning App Context 
 export function AppContext({children}) {
     const [theme, setTheme] = useState("light")
+    const [changeCol, setChangeCol] = useState("")
 
     return (
         <AppCtx.Provider value={{
-            theme, setTheme
+            theme, setTheme, changeCol, setChangeCol
         }}
         >
             {children}

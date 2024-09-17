@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { UseAppContext } from "../Context/AppContext";
+import imgProfilePhoto from "../assets/img/welcome/Avinash-ProfilePhoto.jpg";
 
 export function Menubar() {
-    const {theme, setTheme} = UseAppContext();
+    const {theme, setTheme } = UseAppContext();
 
     function changeTheme() {
         if (theme=="light") {
@@ -51,13 +52,7 @@ export function Menubar() {
                     <li className="hover:text-orange-300 hover:scale-110 ease-in-out duration-300 transition-all cursor-pointer"><a href="#contact"><span className="text-lg material-symbols-outlined">connect_without_contact</span>Contact</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                {/* {
-                    theme=="light"?
-                    (<a className="" onClick={() => {setTheme("dark")}}><span className="material-symbols-outlined">dark_mode</span></a>)
-                    :
-                    (<a className="" onClick={() => {setTheme("light")}}><span className="material-symbols-outlined">light_mode</span></a>)
-                } */}
+            <div className="navbar-end flex gap-2">
                 <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value={theme} onChange={changeTheme}/>
@@ -79,7 +74,21 @@ export function Menubar() {
                         <path
                         d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                     </svg>
-                </label>          
+                </label> 
+                <div className="w-10 h-10 flex flex-col justify-center items-center gap-10">
+                    <img 
+                        className="rounded-full shadow-lg border-2 border-teal-400 outline-teal-600 dark:outline-teal-600 outline-dashed outline-2 outline-offset-4 shadow-[inset_0px_0px_30px_3px_#2dd4bf]" 
+                        src={imgProfilePhoto} 
+                        alt="PP" 
+                    />
+                </div>
+                {/* {
+                    theme=="light"?
+                    (<a className="" onClick={() => {setTheme("dark")}}><span className="material-symbols-outlined">dark_mode</span></a>)
+                    :
+                    (<a className="" onClick={() => {setTheme("light")}}><span className="material-symbols-outlined">light_mode</span></a>)
+                } */}
+         
             </div>
         </div>
     )

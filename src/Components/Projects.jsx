@@ -12,19 +12,19 @@ export function Projects() {
                 <ProjectCard 
                     projImg={imgLandingPage}
                     projTitle="Event Management"
-                    projShortDesc="Basically Focussed On Wedding Event Arrangement"
+                    projShortDesc="Excellent Concept Focussed On Wedding Event Arrangement with Userwise, VendorWise DataManagement"
                     page="weddingwise-eventmanagement"
                 />
                 <ProjectCard 
                     projImg={imgTravelApp}
                     projTitle="Travel App"
-                    projShortDesc="LandingPage with MobileFirst Approach"
+                    projShortDesc="Beautiful LandingPage with Responsiveness Full Login Functionality and UserRating-MobileApp Model(CRUD)"
                     page="travelapp-management"
                 />
                 <ProjectCard 
                     projImg={imgPortfolio}
                     projTitle="Portfolio"
-                    projShortDesc="Simple and Elegant"
+                    projShortDesc="Simple and Elegant with Different Theme, ContactForm with saving in backend"
                     page="avinashportfolio"
                 />
                 <ProjectCard 

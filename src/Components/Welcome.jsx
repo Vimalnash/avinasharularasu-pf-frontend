@@ -3,6 +3,10 @@ import React from "react";
 
 // Welcome View
 export function Welcome() {
+    const desig = "Full Stack Developer";
+    const desigarr = desig.split("");
+    let desigtext = "";
+
     return (
         <div id="welcome"  className="min-h-screen w-full flex flex-col justify-around items-center text-white pt-16 p-5 md:px-32 bgImgWelcome">
         {/* <div id="welcome"  className="min-h-screen w-full flex flex-col justify-around items-center bg-gradient-to-r from-base-200 to-base-400 pt-16 p-5 md:px-32 bgImgWelcome"> */}
@@ -12,6 +16,7 @@ export function Welcome() {
                         <div className="space-y-4">
                             <p className="text-4xl">Welcome!</p>
                             <p className="">Myself Avinash Arularasu</p>
+                            <p className="">{} Full Stack Developer</p>
                         </div>
                     </div>
                     <div className="">
@@ -29,9 +34,10 @@ export function Welcome() {
                 </div> */}
             </div>
             <div className="w-full flex flex-col justify-end" >
-                <a href="#about">
+                <a href="#about"> 
                     <div className="-z-1  relative rounded-xl overflow-auto p-8">
-                        <div className="flex justify-center">
+                        <div className="flex flex-col gap-4 justify-center items-center">
+                            <span className="text-xl font-semibold">Know More</span>
                             <div className="animate-bounce border-4 border-teal-400 bg-white dark:bg-teal-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 rounded-full flex items-center justify-center">
                                 <svg className="w-6 h-6 text-teal-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                                     <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>

@@ -1,5 +1,5 @@
 import React from "react";
-import { RiLinkedinBoxFill} from "react-icons/ri";
+import { RiGithubFill, RiLinkedinBoxFill} from "react-icons/ri";
 
 export function Footer() {
     return (
@@ -27,6 +27,15 @@ export function Footer() {
                                     href="https://in.linkedin.com/in/avinash-arularasu-b6572754?trk=profile-badge" 
                                     target="_blank">
                                     Linkedin
+                                </a>
+                            </li>
+                            <li className="flex flex-row justify-start items-center gap-2 hover:text-orange-300 hover:scale-110 ease-in-out duration-300 transition-all cursor-pointer">
+                                <RiGithubFill size={24} className="" />
+                                <a 
+                                    class="badge-base__link LI-simple-link" 
+                                    href="https://github.com/Vimalnash" 
+                                    target="_blank">
+                                    Github
                                 </a>
                             </li>
                         </ul>
