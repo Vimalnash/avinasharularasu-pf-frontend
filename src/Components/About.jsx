@@ -10,7 +10,9 @@ export function About({children}) {
                 <br />
                 I was in the IT Services and Consulting company in which I have been in the Customer Support and Marketing Division where I gainded excellent customer centric experiences 
                 <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
-                    <button className="px-4 underline text-blue-400 hover:scale-110 ease-in-out transition-all duration-300">View My Resume</button>
+                    <button className="px-4 underline text-blue-400 hover:scale-110 ease-in-out transition-all duration-300">
+                        View My Resume
+                    </button>
                 </a>
                  and Now moving forward in the Development Sector.
                 <br />

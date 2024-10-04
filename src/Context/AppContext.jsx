@@ -7,10 +7,13 @@ const AppCtx = createContext(null)
 export function AppContext({children}) {
     const [theme, setTheme] = useState("light")
     const [changeCol, setChangeCol] = useState("")
+    const [LoadingTrue, setLoadingTrue] = useState(true)
 
     return (
         <AppCtx.Provider value={{
-            theme, setTheme, changeCol, setChangeCol
+            theme, setTheme, 
+            changeCol, setChangeCol, 
+            LoadingTrue, setLoadingTrue
         }}
         >
             {children}

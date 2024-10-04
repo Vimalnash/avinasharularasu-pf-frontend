@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import imgProfilePhoto from "../assets/img/welcome/Avinash-ProfilePhoto.jpg";
 
 // Welcome View
 export function Welcome() {
-    const desig = "Full Stack Developer";
-    const desigarr = desig.split("");
-    let desigtext = "";
+    const [showClass, setShowClass] = useState(false);
+
+    useEffect(() =>{
+        setShowClass(true)
+    }, [])
+
 
     return (
-        <div id="welcome"  className="min-h-screen w-full flex flex-col justify-around items-center text-white pt-16 p-5 md:px-32 bgImgWelcome">
-        {/* <div id="welcome"  className="min-h-screen w-full flex flex-col justify-around items-center bg-gradient-to-r from-base-200 to-base-400 pt-16 p-5 md:px-32 bgImgWelcome"> */}
+        <div id="welcome"  className={`${showClass? "show": "hide"} min-h-screen w-full flex flex-col justify-around items-center text-white pt-16 p-5 md:px-32 bgImgWelcome`} >    
             <div className="w-full flex flex-col justify-center gap-10 lg:flex-row" >
                 <div className="w-full lg:w-2/4 flex flex-col justify-center items-center gap-10">
                     <div className="text-2xl font-semibold text-center">
@@ -21,7 +23,11 @@ export function Welcome() {
                     </div>
                     <div className="">
                         <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
-                            <button className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300">Download Resume</button>
+                            <button 
+                            className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300"
+                            >
+                                Download Resume
+                            </button>
                         </a>
                     </div>
                 </div>

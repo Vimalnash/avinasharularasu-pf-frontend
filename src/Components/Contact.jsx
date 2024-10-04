@@ -191,7 +191,9 @@ export function Contact() {
                         </p>
                         <div className="">
                             <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
-                                <button className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300">Download Resume</button>
+                                <button className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300">
+                                    Download Resume
+                                </button>
                             </a>
                         </div>
                     </div>
