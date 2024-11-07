@@ -21,6 +21,7 @@
     
 }
 
+/* Used in Projects */
 .anim {
     position: relative;
     animation: scrollhoriz 5s linear;
@@ -72,3 +73,6 @@
 }
 
 
+option:hover {
+    background-color: none;
+}

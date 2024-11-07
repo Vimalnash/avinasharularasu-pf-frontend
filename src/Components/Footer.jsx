@@ -1,9 +1,21 @@
 import React from "react";
 import { RiGithubFill, RiLinkedinBoxFill} from "react-icons/ri";
+import { UseAppContext } from "../Context/AppContext";
 
 export function Footer() {
+    const {theme, setTheme,colorTheme, setColorTheme,
+        bgColorTheme,
+        bgHoverColorTheme,
+        bgGradFromColorTheme,
+        bgGradToColorTheme,
+        outlineColorTheme,
+        borderColorTheme, 
+    } = UseAppContext();
+
     return (
-        <div className="w-full min-h-40 p-5 bg-gradient-to-r from-teal-900 to-teal-600 text-slate-100">
+        <div 
+        style={ {backgroundImage: `linear-gradient(180deg, ${bgGradFromColorTheme}, ${bgGradToColorTheme})`} }
+        className="w-full min-h-40 p-5  text-slate-100">
             <div className="flex flex-col justify-center gap-5 lg:flex-row">
                 <div className="flex justify-center">
                     <div className="flex flex-col gap-2">

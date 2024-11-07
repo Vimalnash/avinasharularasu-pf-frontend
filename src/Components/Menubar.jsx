@@ -1,17 +1,28 @@
+import { useState } from "react";
 import { UseAppContext } from "../Context/AppContext";
 import imgProfilePhoto from "../assets/img/welcome/Avinash-ProfilePhoto.jpg";
 
 export function Menubar() {
-    const {theme, setTheme } = UseAppContext();
+    const {theme, setTheme,colorTheme, setColorTheme,
+        bgColorTheme,
+        bgHoverColorTheme,
+        bgGradFromColorTheme,
+        bgGradToColorTheme,
+        outlineColorTheme,
+        borderColorTheme, 
+    } = UseAppContext();
 
     function changeTheme() {
         if (theme=="light") {
             setTheme("dark")
         } else setTheme("light")
-    }
+    };
 
     return (
-        <div className="navbar z-40 h-6 bg-gradient-to-b from-teal-100 to-teal-800 sticky top-0">
+        <div 
+        style={ {backgroundImage: `linear-gradient(180deg, ${bgGradFromColorTheme}, ${bgGradToColorTheme})`} }
+        className={`navbar z-40 h-6 sticky top-0`}>
+        {/* <div className="navbar z-40 h-6 bg-gradient-to-b from-teal-100 to-teal-800 sticky top-0"> */}
         {/* <div className="navbar bg-gradient-to-r from-cyan-200 to-blue-200 sticky top-0"> */}
             <div className="navbar-start">
                 <div className="dropdown">
@@ -77,7 +88,8 @@ export function Menubar() {
                 </label> 
                 <div className="w-10 h-10 flex flex-col justify-center items-center gap-10">
                     <img 
-                        className="rounded-full shadow-lg border-2 border-teal-400 outline-teal-600 dark:outline-teal-600 outline-dashed outline-2 outline-offset-4 shadow-[inset_0px_0px_30px_3px_#2dd4bf]" 
+                        className={`rounded-full shadow-lg border-2 outline-2 outline-offset-4 shadow-[inset_0px_0px_30px_3px_#2dd4bf]`}
+                        style={ {borderColor: borderColorTheme, outlineColor: outlineColorTheme} }
                         src={imgProfilePhoto} 
                         alt="PP" 
                     />
@@ -88,6 +100,25 @@ export function Menubar() {
                     :
                     (<a className="" onClick={() => {setTheme("light")}}><span className="material-symbols-outlined">light_mode</span></a>)
                 } */}
+                {
+                    <div className="flex flex-col">
+
+                        <label className="text-slate-100">ThemeColor</label>
+                        <select 
+                            value={colorTheme}
+                            onChange={(e) => setColorTheme(e.target.value)}
+                            className="px-2 rounded-lg"
+                        >
+                            <option></option>
+                            <option value="teal" style={{backgroundColor:"#2dd4bf"}}>GreenTeal<label style={{color: "white"}}></label></option>
+                            <option value="lime" style={{backgroundColor:"#a3e635"}}>GreenLime</option>
+                            <option value="purple" style={{backgroundColor:"#c084fc"}}>Purple</option>
+                            <option value="pink" style={{backgroundColor:"#f472b6"}}>Pink</option>
+                            <option value="red" style={{backgroundColor:"#f87171"}}>Red</option>
+                            <option value="brown" style={{backgroundColor:"#fbbf24"}}>YellowBrown</option>
+                        </select>
+                    </div>
+                }
          
             </div>
         </div>

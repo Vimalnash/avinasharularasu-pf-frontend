@@ -7,7 +7,13 @@ import { useState } from "react";
 
 // Contact Section
 export function Contact() {
-    const {theme} = UseAppContext();
+    const {theme,setTheme,colorTheme, setColorTheme,
+        bgColorTheme,
+        bgHoverColorTheme,
+        bgGradFromColorTheme,
+        bgGradToColorTheme,
+        outlineColorTheme,
+        borderColorTheme,ShadowColorTheme } = UseAppContext();
     const [successMessage, setSuccessMessage] = useState("");
     const [failureMessage, setFailureMessage] = useState("");
     const [successEmailMessage, setSuccessEmailMessage] = useState("");
@@ -81,7 +87,10 @@ export function Contact() {
                             required
                             type="text" 
                             id="userName" 
-                            className="p-2 rounded-lg border-2 hover:shadow-[0px_0px_5px_3px_#2dd4bf] hover:outline-none focus:shadow-[inset_0px_0px_5px_3px_#2dd4bf] focus:outline-none" 
+                            onMouseEnter={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px ${ShadowColorTheme}`}}
+                            onMouseLeave={(e) => {e.target.style.boxShadow = `0px 0px 0px`}}
+                            onFocus={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px inset ${ShadowColorTheme}`}}
+                            className="p-2 rounded-lg border-2 hover:outline-none focus:outline-none" 
                             value={values.userName} 
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -98,8 +107,11 @@ export function Contact() {
                         <input 
                             required
                             type="email" 
-                            id="email" 
-                            className="p-2 rounded-lg border-2 hover:shadow-[0px_0px_5px_3px_#2dd4bf] hover:outline-none focus:shadow-[inset_0px_0px_5px_3px_#2dd4bf] focus:outline-none" 
+                            id="email"  
+                            onMouseEnter={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px ${ShadowColorTheme}`}}
+                            onMouseLeave={(e) => {e.target.style.boxShadow = `0px 0px 0px`}}
+                            onFocus={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px inset ${ShadowColorTheme}`}}
+                            className="p-2 rounded-lg border-2 hover:outline-none focus:outline-none" 
                             value={values.email} 
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -117,7 +129,10 @@ export function Contact() {
                             required
                             type="text" 
                             id="message" 
-                            className="p-2 rounded-lg border-2 hover:shadow-[0px_0px_5px_3px_#2dd4bf] hover:outline-none focus:shadow-[inset_0px_0px_5px_3px_#2dd4bf] focus:outline-none" 
+                            onMouseEnter={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px ${ShadowColorTheme}`}}
+                            onMouseLeave={(e) => {e.target.style.boxShadow = `0px 0px 0px`}}
+                            onFocus={(e) => {e.target.style.boxShadow = `0px 0px 5px 3px inset ${ShadowColorTheme}`}}
+                            className="p-2 rounded-lg border-2 hover:outline-none focus:outline-none" 
                             value={values.message} 
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -132,7 +147,13 @@ export function Contact() {
                         }
                     </div>
                     <div className="flex flex-row justify-center">
-                        <button type="submit" className="px-6 btn btn-accent">Send</button>
+                        <button type="submit" 
+                         onMouseEnter={(e) => {e.target.style.backgroundColor = bgHoverColorTheme, e.target.style.color = "white"}}
+                         onMouseLeave={(e) => {e.target.style.backgroundColor = bgColorTheme, e.target.style.color = "black"}}
+                         style={ {backgroundColor: bgColorTheme } }
+                         className="px-6 btn text-black">
+                            Send
+                        </button>
                     </div>
                     <div>
                         { Loading && <div className="text-white text-2xl font-semibold text-center">
@@ -191,7 +212,11 @@ export function Contact() {
                         </p>
                         <div className="">
                             <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
-                                <button className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300">
+                                <button 
+                                onMouseEnter={(e) => {e.target.style.backgroundColor = bgHoverColorTheme, e.target.style.color = "white"}}
+                                onMouseLeave={(e) => {e.target.style.backgroundColor = bgColorTheme, e.target.style.color = "black"}}
+                                style={ {backgroundColor: bgColorTheme } }
+                                className="px-6 py-2 text-black rounded-xl btn hover:scale-110 ease-in-out transition-all duration-300">
                                     Download Resume
                                 </button>
                             </a>

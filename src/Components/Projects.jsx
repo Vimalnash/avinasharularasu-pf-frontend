@@ -18,7 +18,7 @@ export function Projects() {
                     <ProjectCard 
                         projImg={imgLandingPage}
                         projTitle="Event Management"
-                        projShortDesc="Excellent Concept Focussed On Wedding Event Arrangement with Userwise, VendorWise DataManagement"
+                        projShortDesc="Excellent Concept Focussed On Wedding Event Arrangement with Admin Login and Userwise, VendorWise DataManagement"
                         page="weddingwise-eventmanagement"
                     />
                     <ProjectCard 
@@ -36,19 +36,19 @@ export function Projects() {
                     <ProjectCard 
                         projImg={imgPortfolio}
                         projTitle="Portfolio"
-                        projShortDesc="Simple and Elegant with Different Theme, ContactForm with saving in backend"
+                        projShortDesc="Simple and Elegant with darkMode and Different Color Theme, ContactForm with saving in backend and more.."
                         page="avinashportfolio"
                     />
                     <ProjectCard 
                         projImg={imgProductPaginationApp}
                         projTitle="Product Listing"
-                        projShortDesc="Listing Products with SearchCriteria and Custom built Pagination,also used ReduxToolkit"
+                        projShortDesc="Used Redux for StateManagement, Custom built Pagination and Listing Products with SearchCriteria."
                         page="productlisting"
                     />
                     <ProjectCard 
                         projImg={imgMovieBrowser}
                         projTitle="Movie Browser"
-                        projShortDesc="Browse from Millions of Movies to get Details-Used API Key&Token"
+                        projShortDesc="Used API Key&Token - Browse from Millions of Movies to get Details and Detail Page"
                         page="MovieBrowser"
                     />
             </div>

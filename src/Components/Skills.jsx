@@ -3,11 +3,23 @@ import { RiCss3Fill } from "react-icons/ri";
 import { RiJavascriptFill } from "react-icons/ri";
 import { RiReactjsFill } from "react-icons/ri";
 import { RiNodejsFill } from "react-icons/ri";
+import { UseAppContext } from "../Context/AppContext";
 
 // Skill List
 export function Skills() {
+    const {theme, setTheme,colorTheme, setColorTheme,
+        bgColorTheme,
+        bgHoverColorTheme,
+        bgGradFromColorTheme,
+        bgGradToColorTheme,
+        outlineColorTheme,
+        borderColorTheme, 
+        ShadowColorTheme
+    } = UseAppContext();
     return (
-        <div id="skills" className="w-full shadow-[inset_0px_0px_5px_0.2px_#2dd4bf] flex flex-col space-y-5 bg-gradient-to-r from-base-200 to-base-100 pt-16 px-16 pb-10 md:px-16">
+        <div 
+        style={ {boxShadow: `0px 0px 5px inset ${ShadowColorTheme}`} }
+        id="skills" className="w-full flex flex-col space-y-5 bg-gradient-to-r from-base-200 to-base-100 pt-16 px-16 pb-10 md:px-16">
             <h3 className="mb-5 text-3xl font-semibold text-center">Skills</h3>
             <div className="w-full ">
                 <h2 className="text-sm font-semibold">Programming:</h2>
@@ -63,7 +75,11 @@ export function Skills() {
             </div>
             <div className="flex flex-row justify-center">
                 <a href="#contact">
-                    <button className="px-6 py-2 rounded-xl btn btn-accent hover:scale-110 ease-in-out transition-all duration-300"
+                    <button 
+                    onMouseEnter={(e) => {e.target.style.backgroundColor = bgHoverColorTheme, e.target.style.color = "white"}}
+                    onMouseLeave={(e) => {e.target.style.backgroundColor = bgColorTheme, e.target.style.color = "black"}}
+                    style={ {backgroundColor: bgColorTheme, hover:bgHoverColorTheme} }
+                    className="px-6 py-2 text-black rounded-xl btn  hover:scale-110 ease-in-out transition-all duration-300"
                     >Hire
                     </button>
                 </a>

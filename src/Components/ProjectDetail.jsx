@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { ProjectDetailCard } from "../Layouts/ProjectDetailCard";
+import { UseAppContext } from "../Context/AppContext";
 
 // Project Details Page display based on Project clicked
 export function ProjectDetail() {
@@ -7,16 +8,20 @@ export function ProjectDetail() {
     const projTitleParam = projectNameUrlParamObj.projDetail;
     const navigate = useNavigate();
     // console.log(projectName)
+    const {theme, setTheme,colorTheme, setColorTheme,
+        bgColorTheme,
+        bgHoverColorTheme,
+        bgGradFromColorTheme,
+        bgGradToColorTheme,
+        outlineColorTheme,
+        borderColorTheme, 
+    } = UseAppContext();
 
     return (
         <div>
-        <div className="flex flex-row justify-center items-center w-full z-40 h-12 text-white text-xl font-semibold bg-gradient-to-b from-teal-100 to-teal-800 sticky top-0 left-0 right-0">
-            {/* <button 
-                className="hover:text-orange-300 hover:scale-110 ease-in-out duration-300 cursor-pointer" 
-                onClick={() => {navigate("/"); window.scrollTo(0,750)} }
-            >
-                &larr;GoBack
-            </button> */}
+        <div 
+        style={ {backgroundImage: `linear-gradient(180deg, ${bgGradFromColorTheme}, ${bgGradToColorTheme})`} }        
+        className="flex flex-row justify-center items-center w-full z-40 h-12 text-white text-xl font-semibold sticky top-0 left-0 right-0">
             <a 
                 className="hover:text-orange-300 hover:scale-110 ease-in-out duration-300 cursor-pointer" 
                 onClick={() => {navigate("/")}}
@@ -33,6 +38,8 @@ export function ProjectDetail() {
                     title="Event Management"
                     sub="Focussed on Wedding Related Event Management Concept - Complex CRUD Operations and Navigation - Logical Calculations(AmountRegarding) -  Admin, VendorWise, UserWise Login process and Data Management using Authenticaion and Authorization"
                     url="https://weddingwise-em-frontend.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/WeddingWise-EM-Frontend"
+                    giturlbackend="https://github.com/Vimalnash/WeddingWise-EM-Backend"
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             <li>MongoDB</li>
@@ -253,6 +260,8 @@ export function ProjectDetail() {
                     title="Travel/Tour Arrangement App"
                     sub="Focussed on Beautiful LandingPage with Register,Login, Contact and UserRatingForm(CRUD Operation) and Responsiveness"
                     url="https://tripworld.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/FSD-TravelApp-Frontend"
+                    giturlbackend="https://github.com/Vimalnash/FSD-TravelApp-Backend"
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             <li>MongoDB</li>
@@ -292,6 +301,8 @@ export function ProjectDetail() {
                     title="Portfolio-Avinash Arularasu"
                     sub="Focussed on the Contents of Myself and ThemeSetting and Responsiveness and Interactive design"
                     url="https://avinasharularasu.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/avinasharularasu-pf-frontend"
+                    giturlbackend="https://github.com/Vimalnash/avinasharularasu-pf-backend"
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             <li>MongoDB</li>
@@ -321,6 +332,8 @@ export function ProjectDetail() {
                     title="Movie Browser"
                     sub="Implemented Search Functionality for Movies Search and Movie Full Details Page and Basic Login and Logout Navigation"
                     url="https://moviesglobal.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/FSD-MovieBrowser-Frontend"
+                    giturlbackend=""
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             {/* <li>MongoDB</li>
@@ -348,6 +361,8 @@ export function ProjectDetail() {
                     title="E-Commerce App"
                     sub="Focussed on Beautiful LandingPage with Products listing(with Search Criteria) with great product cards, Register,Login and Product Details Page and Responsiveness"
                     url="https://fsd-ecommerce.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/FSD-ECommerce-Frontend"
+                    giturlbackend="https://github.com/Vimalnash/FSD-ECommerce-Backend"
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             <li>MongoDB</li>
@@ -399,8 +414,10 @@ export function ProjectDetail() {
             (       
                 <ProjectDetailCard
                     title="Product Listing"
-                    sub="Displaying List of Products with Search and Custom built Pagination Functionality with Redux Toolkit for State Management"
-                    url="https://moviesglobal.netlify.app/"
+                    sub="Used Redux for state management and Displaying List of Products with Custom built Pagination Functionality and Search."
+                    url="https://productslistpagination.netlify.app/"
+                    giturlfrontend="https://github.com/Vimalnash/Products-Frontend"
+                    giturlbackend=""
                     implementlist={
                         <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
                             <li>Reactjs</li>
@@ -411,8 +428,8 @@ export function ProjectDetail() {
                 >
                 <>
                     <ul className="list-disc list-inside">
-                        <li>Simple user friendly Search Page with Pagination.</li>
                         <li>Used Redux for State Management</li>
+                        <li>Simple user friendly Product Listing with Custom Pagination and Search Page</li>
                     </ul>
                 </>
                 </ProjectDetailCard>
